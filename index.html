@@ -1,0 +1,1051 @@
+
+<html lang='zh-CN'>
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <style>
+        .preview-suitable-app {
+            overflow: visible;
+            height: calc(100% - 20px);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .app-border {
+            transform-origin: center;
+            position: relative;
+            border-radius: 30px 30px 30px 30px;
+        }
+        .app-border::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            border: 4px solid rgb(51, 51, 51);
+            border-radius: 30px 30px 30px 30px;
+        }
+        iframe {
+            transform-origin: left top;
+            border-radius: 26px;
+            overflow: hidden;
+        }
+        .app-border-right {
+            position: absolute;
+            top: 259px;
+            right: -15px;
+        }
+        .app-border-footer {
+            width: 395px;
+            height: 38px;
+            position: absolute;
+            bottom: 8px;
+            left: -1px;
+            border-radius: 0 0 16px 16px;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div id="preview-suitable-content-app" class="preview-suitable-app">
+        <div class="app-border" style="width: 393px;height: 852px;transform:scale(1.233568075117371);">
+            <iframe id="iframe" srcdoc= "<html lang=&quot;zh-CN&quot;>
+ <head>
+  <meta charset=&quot;utf-8&quot;/>
+  <meta content=&quot;width=device-width, initial-scale=1.0&quot; name=&quot;viewport&quot;/>
+  <title>
+   菜品溯源信息查询
+  </title>
+  <script src=&quot;https://res.gemcoder.com/js/reload.js&quot;>
+  </script>
+  <script src=&quot;https://cdn.tailwindcss.com&quot;>
+  </script>
+  <link href=&quot;https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot; rel=&quot;stylesheet&quot;/>
+  <script>
+   tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#165DFF',
+        secondary: '#36B37E',
+        warning: '#FFAB00',
+        danger: '#F5222D',
+        neutral: {
+          100: '#F5F7FA',
+          200: '#E5E6EB',
+          300: '#C9CDD4',
+          400: '#86909C',
+          500: '#4E5969',
+          600: '#272E3B',
+          700: '#1D2129'
+        }
+      },
+      fontFamily: {
+        sans: ['PingFang SC', 'Helvetica Neue', 'Arial', 'sans-serif']
+      },
+      boxShadow: {
+        'card': '0 2px 10px 0 rgba(0, 0, 0, 0.05)',
+        'card-hover': '0 4px 16px 0 rgba(0, 0, 0, 0.08)'
+      }
+    }
+  }
+};
+  </script>
+  <style type=&quot;text/tailwindcss&quot;>
+   @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            }
+            .transition-transform-opacity {
+                transition-property: transform, opacity;
+            }
+        }
+  </style>
+ 
+        <style>
+            ::-webkit-scrollbar { width: 0px; }
+        </style>
+    </head>
+ <body class=&quot;bg-neutral-100 font-sans text-neutral-700 min-h-screen&quot;>
+  <!-- [MODULE] a1b_页面容器 -->
+  <div class=&quot;min-h-screen flex flex-col&quot;>
+   <!-- [MODULE] c2d_顶部导航栏 -->
+   <header class=&quot;bg-white shadow-sm sticky top-0 z-30&quot;>
+    <div class=&quot;container mx-auto px-4 py-3 flex items-center justify-between&quot;>
+     <div class=&quot;flex items-center space-x-2&quot;>
+      <i class=&quot;fas fa-shield-alt text-primary text-xl&quot;>
+      </i>
+      <h1 class=&quot;text-lg font-semibold text-neutral-700&quot;>
+       产品展示
+      </h1>
+     </div>
+     <div class=&quot;flex items-center space-x-4&quot;>
+      <button class=&quot;text-neutral-500 hover:text-primary transition-colors&quot; id=&quot;share-btn&quot;>
+       <i class=&quot;fas fa-share-alt text-lg&quot;>
+       </i>
+      </button>
+      <button class=&quot;text-neutral-500 hover:text-primary transition-colors&quot; id=&quot;refresh-btn&quot;>
+       <i class=&quot;fas fa-sync-alt text-lg&quot;>
+       </i>
+      </button>
+     </div>
+    </div>
+   </header>
+   <!-- [/MODULE] c2d_顶部导航栏 -- 包含页面标题和操作按钮 -->
+   <!-- [MODULE] e3f_主内容区域 -->
+   <main class=&quot;flex-1 container mx-auto px-4 py-5&quot;>
+    <!-- [MODULE] g4h_菜品基本信息 -->
+    <div class=&quot;mb-6&quot;>
+     <!-- [MODULE] i5j_菜品名称 -->
+     <div class=&quot;mb-4&quot;>
+      <h2 class=&quot;text-[clamp(1.5rem,5vw,2rem)] font-bold text-neutral-700 leading-tight&quot; id=&quot;dish-name&quot;>
+       五常大米
+      </h2>
+      <div class=&quot;flex items-center mt-2 space-x-3&quot;>
+       <span class=&quot;inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary&quot;>
+        <i class=&quot;fas fa-check-circle mr-1&quot;>
+        </i>
+        官方认证
+       </span>
+       <span class=&quot;inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary&quot;>
+        <i class=&quot;fas fa-leaf mr-1&quot;>
+        </i>
+        地理标志产品
+       </span>
+      </div>
+     </div>
+     <!-- [/MODULE] i5j_菜品名称 -- 显示菜品名称和认证标签 -->
+     <!-- [MODULE] k6l_菜品图片轮播 -->
+     <div class=&quot;relative rounded-xl overflow-hidden bg-white shadow-card mb-5&quot;>
+      <div class=&quot;relative h-[200px] md:h-[280px] overflow-hidden&quot; id=&quot;image-carousel&quot;>
+       <div class=&quot;flex transition-transform duration-300 h-full&quot; id=&quot;carousel-container&quot;>
+        <div class=&quot;carousel-slide min-w-full h-full&quot;>
+         <img alt=&quot;五常大米&quot; class=&quot;w-full h-full object-cover&quot; src=&quot;https://design.gemcoder.com/api/searchImage?query=Premium Wuchang rice in white bowl with steam, close-up, professional food photography, white background, natural lighting showing rice texture&amp;width=640&amp;height=400&quot;/>
+        </div>
+        <div class=&quot;carousel-slide min-w-full h-full&quot;>
+         <img alt=&quot;稻田风光&quot; class=&quot;w-full h-full object-cover&quot; src=&quot;https://design.gemcoder.com/api/searchImage?query=Rice paddy field with blue sky, green rice plants, natural environment, high quality landscape photography showing agricultural scenery&amp;width=640&amp;height=400&quot;/>
+        </div>
+        <div class=&quot;carousel-slide min-w-full h-full&quot;>
+         <img alt=&quot;大米加工过程&quot; class=&quot;w-full h-full object-cover&quot; src=&quot;https://design.gemcoder.com/api/searchImage?query=Modern rice processing facility with clean production line, professional industrial photography, showing quality control process of rice production&amp;width=640&amp;height=400&quot;/>
+        </div>
+       </div>
+       <!-- 轮播控制按钮 -->
+       <button class=&quot;absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 shadow-md flex items-center justify-center text-neutral-600 hover:bg-white transition-colors z-10&quot; id=&quot;prev-btn&quot;>
+        <i class=&quot;fas fa-chevron-left&quot;>
+        </i>
+       </button>
+       <button class=&quot;absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 shadow-md flex items-center justify-center text-neutral-600 hover:bg-white transition-colors z-10&quot; id=&quot;next-btn&quot;>
+        <i class=&quot;fas fa-chevron-right&quot;>
+        </i>
+       </button>
+       <!-- 轮播指示器 -->
+       <div class=&quot;absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2&quot; id=&quot;carousel-indicators&quot;>
+        <button class=&quot;w-2.5 h-2.5 rounded-full bg-white opacity-100 transition-opacity&quot;>
+        </button>
+        <button class=&quot;w-2.5 h-2.5 rounded-full bg-white opacity-50 transition-opacity&quot;>
+        </button>
+        <button class=&quot;w-2.5 h-2.5 rounded-full bg-white opacity-50 transition-opacity&quot;>
+        </button>
+       </div>
+      </div>
+     </div>
+     <!-- [/MODULE] k6l_菜品图片轮播 -- 支持多图轮播展示，包含前进后退按钮和指示器 -->
+     <!-- [MODULE] m7n_产地信息 -->
+     <div class=&quot;bg-white rounded-xl shadow-card p-4 mb-5&quot;>
+      <h3 class=&quot;text-neutral-700 font-semibold mb-3 flex items-center&quot;>
+       <i class=&quot;fas fa-map-marker-alt text-primary mr-2&quot;>
+       </i>
+       产地信息
+      </h3>
+      <div class=&quot;space-y-3&quot;>
+       <div class=&quot;flex&quot;>
+        <span class=&quot;text-neutral-500 w-24&quot;>
+         产地地区:
+        </span>
+        <span class=&quot;text-neutral-700&quot;>
+         黑龙江省哈尔滨市五常市
+        </span>
+       </div>
+       <div class=&quot;flex&quot;>
+        <span class=&quot;text-neutral-500 w-24&quot;>
+         种植基地:
+        </span>
+        <span class=&quot;text-neutral-700&quot;>
+         五常市优质水稻种植基地
+        </span>
+       </div>
+       <div class=&quot;flex&quot;>
+        <span class=&quot;text-neutral-500 w-24&quot;>
+         种植时间:
+        </span>
+        <span class=&quot;text-neutral-700 yt-editor&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+         2025年04月
+        </span>
+       </div>
+       <div class=&quot;flex&quot;>
+        <span class=&quot;text-neutral-500 w-24&quot;>
+         收获时间:
+        </span>
+        <span class=&quot;text-neutral-700&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+         2025年10月15日
+        </span>
+       </div>
+      </div>
+     </div>
+     <!-- [/MODULE] m7n_产地信息 -- 显示菜品的产地、种植基地和时间信息 -->
+    </div>
+    <!-- [/MODULE] g4h_菜品基本信息 -- 包含菜品名称、图片轮播和产地信息 -->
+    <!-- [MODULE] o8p_田主承诺 -->
+    <div class=&quot;bg-white rounded-xl shadow-card p-5 mb-5&quot;>
+     <div class=&quot;flex items-start&quot;>
+      <div class=&quot;flex-shrink-0&quot;>
+       <div class=&quot;w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center&quot;>
+        <i class=&quot;fas fa-handshake text-primary text-xl&quot;>
+        </i>
+       </div>
+      </div>
+      <div class=&quot;ml-4 flex-1&quot;>
+       <h3 class=&quot;text-neutral-700 font-semibold mb-2&quot;>
+        田主承诺
+       </h3>
+       <p class=&quot;text-neutral-600 text-sm leading-relaxed&quot;>
+        本人承诺所售五常大米严格按照有机水稻种植标准生产，不使用化学农药、化肥和生长调节剂，采用传统耕作方式，确保大米品质纯正、安全健康。如有虚假，愿意承担一切法律责任。
+       </p>
+       <div class=&quot;mt-3 flex items-center justify-between&quot;>
+        <div class=&quot;flex items-center&quot;>
+         <img alt=&quot;田主头像&quot; class=&quot;w-8 h-8 rounded-full object-cover&quot; src=&quot;https://design.gemcoder.com/api/searchImage?query=Middle-aged Chinese farmer working in rice field, friendly smile, natural lighting, wearing straw hat&amp;width=100&amp;height=100&quot;/>
+         <span class=&quot;ml-2 text-sm font-medium text-neutral-700&quot;>
+          王建国
+         </span>
+        </div>
+        <span class=&quot;text-xs text-neutral-400 yt-editor&quot; contenteditable=&quot;false&quot; style=&quot;outline: none; width: 113px; height: 16px;&quot;>
+         2025年12月06日签署
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- [/MODULE] o8p_田主承诺 -- 以卡片形式展示田主对产品的质量承诺 -->
+    <!-- [MODULE] q9r_检测报告 -->
+    <div class=&quot;bg-white rounded-xl shadow-card mb-5 overflow-hidden&quot;>
+     <div class=&quot;p-4 border-b border-neutral-200&quot;>
+      <h3 class=&quot;text-neutral-700 font-semibold flex items-center&quot;>
+       <i class=&quot;fas fa-file-alt text-primary mr-2&quot;>
+       </i>
+       检测报告
+      </h3>
+     </div>
+     <!-- [MODULE] s0t_最新检测报告 -->
+     <div class=&quot;p-4&quot; id=&quot;latest-report&quot;>
+      <div class=&quot;flex justify-between items-start mb-3&quot;>
+       <h4 class=&quot;font-medium text-neutral-700&quot;>
+        最新检测报告
+       </h4>
+       <span class=&quot;inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-secondary/10 text-secondary&quot;>
+        <i class=&quot;fas fa-check mr-1&quot;>
+        </i>
+        合格
+       </span>
+      </div>
+      <div class=&quot;mb-4&quot;>
+       <div class=&quot;flex justify-between text-sm mb-1&quot;>
+        <span class=&quot;text-neutral-500&quot;>
+         检测时间
+        </span>
+        <span class=&quot;text-neutral-700 yt-editor&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+         2025年10月18日
+        </span>
+       </div>
+       <div class=&quot;flex justify-between text-sm mb-1&quot;>
+        <span class=&quot;text-neutral-500&quot;>
+         检测机构
+        </span>
+        <span class=&quot;text-neutral-700&quot;>
+         山东省农产品质量安全检测中心
+        </span>
+       </div>
+       <div class=&quot;flex justify-between text-sm&quot;>
+        <span class=&quot;text-neutral-500&quot;>
+         检测项目
+        </span>
+        <span class=&quot;text-neutral-700&quot;>
+         36项农残及重金属检测
+        </span>
+       </div>
+      </div>
+      <button class=&quot;w-full py-2.5 bg-primary/5 text-primary rounded-lg text-sm font-medium flex items-center justify-center hover:bg-primary/10 transition-colors&quot; id=&quot;view-report-btn&quot;>
+       <i class=&quot;fas fa-eye mr-1.5&quot;>
+       </i>
+       查看完整报告
+      </button>
+     </div>
+     <!-- [/MODULE] s0t_最新检测报告 -- 默认展示最新上传的检测报告，包含检测时间、机构和合格状态 -->
+     <!-- [MODULE] u1v_历史检测记录 -->
+     <div class=&quot;border-t border-neutral-200 p-4&quot;>
+      <button class=&quot;flex items-center justify-between w-full text-sm text-primary hover:text-primary/80 transition-colors&quot; id=&quot;show-history-btn&quot;>
+       <span>
+        查看历史检测记录
+       </span>
+       <i class=&quot;fas fa-chevron-down transition-transform&quot; id=&quot;history-icon&quot;>
+       </i>
+      </button>
+      <!-- [MODULE] w2x_历史记录列表 -->
+      <div class=&quot;hidden mt-3 space-y-3&quot; id=&quot;history-list&quot;>
+       <div class=&quot;border border-neutral-200 rounded-lg p-3 hover:border-primary/50 transition-colors cursor-pointer&quot;>
+        <div class=&quot;flex justify-between items-start&quot;>
+         <span class=&quot;text-sm font-medium text-neutral-700 yt-editor&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+          2025年9月20日检测
+         </span>
+         <span class=&quot;inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-secondary/10 text-secondary&quot;>
+          <i class=&quot;fas fa-check mr-1&quot;>
+          </i>
+          合格
+         </span>
+        </div>
+        <div class=&quot;flex justify-between text-xs text-neutral-500 mt-1&quot;>
+         <span>
+          山东省农产品质量安全检测中心
+         </span>
+         <span>
+          36项农残及重金属检测
+         </span>
+        </div>
+       </div>
+       <div class=&quot;border border-neutral-200 rounded-lg p-3 hover:border-primary/50 transition-colors cursor-pointer&quot;>
+        <div class=&quot;flex justify-between items-start&quot;>
+         <span class=&quot;text-sm font-medium text-neutral-700&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+          2025年8月15日检测
+         </span>
+         <span class=&quot;inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-secondary/10 text-secondary&quot;>
+          <i class=&quot;fas fa-check mr-1&quot;>
+          </i>
+          合格
+         </span>
+        </div>
+        <div class=&quot;flex justify-between text-xs text-neutral-500 mt-1&quot;>
+         <span>
+          山东省农产品质量安全检测中心
+         </span>
+         <span>
+          36项农残及重金属检测
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- [/MODULE] w2x_历史记录列表 -- 展示历史检测记录，默认隐藏 -->
+     </div>
+     <!-- [/MODULE] u1v_历史检测记录 -- 包含查看历史记录按钮和历史记录列表 -->
+    </div>
+    <!-- [/MODULE] q9r_检测报告 -- 显示最新检测报告和历史检测记录，支持点击查看详情 -->
+    <!-- [MODULE] y3z_教学视频 -->
+    <div class=&quot;bg-white rounded-xl shadow-card mb-5 overflow-hidden&quot;>
+     <div class=&quot;p-4 border-b border-neutral-200&quot;>
+      <h3 class=&quot;text-neutral-700 font-semibold flex items-center&quot;>
+       <i class=&quot;fas fa-video text-primary mr-2&quot;>
+       </i>
+       教学视频
+      </h3>
+     </div>
+     <div class=&quot;p-4&quot;>
+      <div class=&quot;relative rounded-lg overflow-hidden bg-neutral-200 aspect-video mb-3 cursor-pointer group&quot; id=&quot;video-container&quot;>
+       <img alt=&quot;五常大米烹饪方法&quot; class=&quot;w-full h-full object-cover&quot; src=&quot;https://design.gemcoder.com/api/searchImage?query=五常大米 cooking tutorial video cover, rice in pot, steam rising, natural lighting, traditional Chinese kitchen setting&amp;width=640&amp;height=360&quot;/>
+       <div class=&quot;absolute inset-0 bg-black/30 flex items-center justify-center opacity-100 group-hover:opacity-100 transition-opacity&quot;>
+        <div class=&quot;w-16 h-16 rounded-full bg-white/90 flex items-center justify-center transform group-hover:scale-110 transition-transform&quot;>
+         <i class=&quot;fas fa-play text-primary text-xl ml-1&quot;>
+         </i>
+        </div>
+       </div>
+      </div>
+      <h4 class=&quot;font-medium text-neutral-700 mb-1&quot;>
+       五常大米科学烹饪方法
+      </h4>
+      <p class=&quot;text-sm text-neutral-500&quot;>
+       了解五常大米的正确浸泡时间、水量比例和烹饪技巧，享受最佳口感与营养
+      </p>
+     </div>
+    </div>
+    <!-- [/MODULE] y3z_教学视频 -- 包含视频封面和播放按钮，以及简短说明 -->
+    <!-- [MODULE] a4b_溯源信息 -->
+    <div class=&quot;bg-white rounded-xl shadow-card mb-5&quot;>
+     <div class=&quot;p-4 border-b border-neutral-200&quot;>
+      <h3 class=&quot;text-neutral-700 font-semibold flex items-center&quot;>
+       <i class=&quot;fas fa-history text-primary mr-2&quot;>
+       </i>
+       全程溯源
+      </h3>
+     </div>
+     <div class=&quot;p-4&quot;>
+      <!-- [MODULE] c5d_溯源时间线 -->
+      <div class=&quot;relative&quot;>
+       <!-- 时间线轴线 -->
+       <div class=&quot;absolute left-3 top-0 bottom-0 w-0.5 bg-neutral-200&quot;>
+       </div>
+       <!-- 时间线节点 -->
+       <div class=&quot;relative pl-10 pb-6 last:pb-0&quot;>
+        <div class=&quot;absolute left-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10&quot;>
+         <i class=&quot;fas fa-seedling text-white text-xs&quot;>
+         </i>
+        </div>
+        <div>
+         <h4 class=&quot;font-medium text-neutral-700&quot;>
+          播种
+         </h4>
+         <p class=&quot;text-sm text-neutral-500 mt-1 yt-editor&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+          2025年4月5日
+         </p>
+         <p class=&quot;text-sm text-neutral-600 mt-1&quot;>
+          精选五常稻花香2号稻种，采用人工插秧，确保苗齐苗壮
+         </p>
+        </div>
+       </div>
+       <div class=&quot;relative pl-10 pb-6 last:pb-0&quot;>
+        <div class=&quot;absolute left-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10&quot;>
+         <i class=&quot;fas fa-tint text-white text-xs&quot;>
+         </i>
+        </div>
+        <div>
+         <h4 class=&quot;font-medium text-neutral-700&quot;>
+          生长期管理
+         </h4>
+         <p class=&quot;text-sm text-neutral-500 mt-1 yt-editor&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+          2025年4月-9月
+         </p>
+         <p class=&quot;text-sm text-neutral-600 mt-1&quot;>
+          采用鸭稻共作生态种植模式，人工除草，引用牤牛河水源灌溉
+         </p>
+        </div>
+       </div>
+       <div class=&quot;relative pl-10 pb-6 last:pb-0&quot;>
+        <div class=&quot;absolute left-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10&quot;>
+         <i class=&quot;fas fa-apple-alt text-white text-xs&quot;>
+         </i>
+        </div>
+        <div>
+         <h4 class=&quot;font-medium text-neutral-700&quot;>
+          采摘
+         </h4>
+         <p class=&quot;text-sm text-neutral-500 mt-1 yt-editor&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+          2025年10月15日
+         </p>
+         <p class=&quot;text-sm text-neutral-600 mt-1&quot;>
+          人工收割，自然晾晒，确保稻谷含水率达标
+         </p>
+        </div>
+       </div>
+       <div class=&quot;relative pl-10 pb-6 last:pb-0&quot;>
+        <div class=&quot;absolute left-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10&quot;>
+         <i class=&quot;fas fa-truck text-white text-xs&quot;>
+         </i>
+        </div>
+        <div>
+         <h4 class=&quot;font-medium text-neutral-700&quot;>
+          运输
+         </h4>
+         <p class=&quot;text-sm text-neutral-500 mt-1 yt-editor&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+          2025年10月15日-10月16日
+         </p>
+         <p class=&quot;text-sm text-neutral-600 mt-1&quot;>
+          低温仓储，恒温恒湿环境，确保大米新鲜度
+         </p>
+        </div>
+       </div>
+       <div class=&quot;relative pl-10 pb-6 last:pb-0&quot;>
+        <div class=&quot;absolute left-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10&quot;>
+         <i class=&quot;fas fa-store text-white text-xs&quot;>
+         </i>
+        </div>
+        <div>
+         <h4 class=&quot;font-medium text-neutral-700&quot;>
+          销售
+         </h4>
+         <p class=&quot;text-sm text-neutral-500 mt-1&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+          2025年10月17日至今
+         </p>
+         <p class=&quot;text-sm text-neutral-600 mt-1&quot;>
+          真空包装，在五常大米官方授权店销售
+         </p>
+        </div>
+       </div>
+      </div>
+      <!-- [/MODULE] c5d_溯源时间线 -- 以时间线形式展示产品从种植到销售的全过程 -->
+     </div>
+    </div>
+    <!-- [/MODULE] a4b_溯源信息 -- 展示产品从种植到销售的全程溯源信息 -->
+    <!-- [MODULE] e6f_信息验证 -->
+    <div class=&quot;bg-white rounded-xl shadow-card p-4 mb-5&quot;>
+     <div class=&quot;flex items-center justify-between mb-3&quot;>
+      <h3 class=&quot;text-neutral-700 font-semibold flex items-center&quot;>
+       <i class=&quot;fas fa-qrcode text-primary mr-2&quot;>
+       </i>
+       信息验证
+      </h3>
+      <span class=&quot;text-sm text-secondary font-medium&quot;>
+       <i class=&quot;fas fa-check-circle mr-1&quot;>
+       </i>
+       已验证
+      </span>
+     </div>
+     <div class=&quot;flex items-center&quot;>
+      <div class=&quot;w-24 h-24 bg-neutral-100 rounded-lg flex items-center justify-center mr-4&quot;>
+       <img alt=&quot;验证二维码&quot; class=&quot;w-20 h-20 object-contain&quot; src=&quot;https://design.gemcoder.com/api/searchImage?query=Verification QR code, black on white background, clear&amp;width=200&amp;height=200&quot;/>
+      </div>
+      <div class=&quot;flex-1&quot;>
+       <p class=&quot;text-sm text-neutral-600 mb-2&quot;>
+        本产品信息已通过食品安全监管平台认证，可放心食用。
+       </p>
+       <div class=&quot;flex items-center text-xs text-neutral-500&quot;>
+        <i class=&quot;fas fa-clock mr-1&quot;>
+        </i>
+        <span class=&quot;yt-editor&quot; contenteditable=&quot;false&quot; style=&quot;outline: none;&quot;>
+         信息更新时间: 2025年10月17日 15:30
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- [/MODULE] e6f_信息验证 -- 展示产品信息的验证状态和二维码 -->
+   </main>
+   <!-- [/MODULE] e3f_主内容区域 -- 包含菜品基本信息、田主承诺、检测报告、教学视频、溯源信息和信息验证模块 -->
+  </div>
+  <!-- [/MODULE] a1b_页面容器 -- 包含整个页面的所有内容 -->
+  <!-- [MODULE] i8j_报告详情弹窗 -->
+  <div class=&quot;fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300&quot; id=&quot;report-modal&quot;>
+   <div class=&quot;bg-white rounded-xl shadow-lg max-w-full w-[90%] max-h-[80vh] overflow-auto transform scale-95 transition-transform duration-300&quot;>
+    <div class=&quot;p-4 border-b border-neutral-200 flex justify-between items-center sticky top-0 bg-white z-10&quot;>
+     <h3 class=&quot;text-lg font-semibold text-neutral-700&quot;>
+      检测报告详情
+     </h3>
+     <button class=&quot;text-neutral-500 hover:text-neutral-700&quot; id=&quot;close-modal&quot;>
+      <i class=&quot;fas fa-times text-xl&quot;>
+      </i>
+     </button>
+    </div>
+    <div class=&quot;p-4&quot;>
+     <div class=&quot;text-center mb-6&quot;>
+      <h4 class=&quot;text-neutral-700 font-medium text-lg mb-1&quot;>
+       五常大米质量安全检测报告
+      </h4>
+      <p class=&quot;text-sm text-neutral-500&quot;>
+       报告编号: WCDB-20231018-00156
+      </p>
+     </div>
+     <div class=&quot;grid grid-cols-2 gap-4 mb-6 text-sm&quot;>
+      <div>
+       <p class=&quot;text-neutral-500&quot;>
+        样品名称
+       </p>
+       <p class=&quot;text-neutral-700 font-medium&quot;>
+        五常大米
+       </p>
+      </div>
+      <div>
+       <p class=&quot;text-neutral-500&quot;>
+        检测日期
+       </p>
+       <p class=&quot;text-neutral-700 font-medium&quot;>
+        2023年10月18日
+       </p>
+      </div>
+      <div>
+       <p class=&quot;text-neutral-500&quot;>
+        检测机构
+       </p>
+       <p class=&quot;text-neutral-700 font-medium&quot;>
+        山东省农产品质量安全检测中心
+       </p>
+      </div>
+      <div>
+       <p class=&quot;text-neutral-500&quot;>
+        报告日期
+       </p>
+       <p class=&quot;text-neutral-700 font-medium&quot;>
+        2023年10月18日
+       </p>
+      </div>
+      <div>
+       <p class=&quot;text-neutral-500&quot;>
+        样品来源
+       </p>
+       <p class=&quot;text-neutral-700 font-medium&quot;>
+        黑龙江省五常市优质水稻种植基地
+       </p>
+      </div>
+      <div>
+       <p class=&quot;text-neutral-500&quot;>
+        检测结果
+       </p>
+       <p class=&quot;text-neutral-700 font-medium text-secondary&quot;>
+        合格
+       </p>
+      </div>
+     </div>
+     <div class=&quot;mb-6&quot;>
+      <h5 class=&quot;font-medium text-neutral-700 mb-3&quot;>
+       检测项目及结果
+      </h5>
+      <div class=&quot;overflow-x-auto&quot;>
+       <table class=&quot;min-w-full divide-y divide-neutral-200 text-sm&quot;>
+        <thead>
+         <tr class=&quot;bg-neutral-100&quot;>
+          <th class=&quot;px-3 py-2 text-left text-neutral-500 font-medium&quot;>
+           检测项目
+          </th>
+          <th class=&quot;px-3 py-2 text-left text-neutral-500 font-medium&quot;>
+           标准限值
+          </th>
+          <th class=&quot;px-3 py-2 text-left text-neutral-500 font-medium&quot;>
+           检测结果
+          </th>
+          <th class=&quot;px-3 py-2 text-left text-neutral-500 font-medium&quot;>
+           单位
+          </th>
+          <th class=&quot;px-3 py-2 text-left text-neutral-500 font-medium&quot;>
+           结论
+          </th>
+         </tr>
+        </thead>
+        <tbody class=&quot;divide-y divide-neutral-200&quot;>
+         <tr>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           镉
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           &le;
+0.2
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           0.012
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           mg/kg
+          </td>
+          <td class=&quot;px-3 py-2 text-secondary&quot;>
+           合格
+          </td>
+         </tr>
+         <tr>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           铅
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           &le;
+0.2
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           0.03
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           mg/kg
+          </td>
+          <td class=&quot;px-3 py-2 text-secondary&quot;>
+           合格
+          </td>
+         </tr>
+         <tr>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           汞
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           &le;
+0.02
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           未检出
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           mg/kg
+          </td>
+          <td class=&quot;px-3 py-2 text-secondary&quot;>
+           合格
+          </td>
+         </tr>
+         <tr>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           六六六
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           &le;
+0.05
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           未检出
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           mg/kg
+          </td>
+          <td class=&quot;px-3 py-2 text-secondary&quot;>
+           合格
+          </td>
+         </tr>
+         <tr>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           滴滴涕
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           &le;
+0.05
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           未检出
+          </td>
+          <td class=&quot;px-3 py-2 text-neutral-700&quot;>
+           mg/kg
+          </td>
+          <td class=&quot;px-3 py-2 text-secondary&quot;>
+           合格
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <p class=&quot;text-xs text-neutral-500 mt-2 text-center&quot;>
+       注：共检测28项，其余项目均未检出或符合标准要求
+      </p>
+     </div>
+     <div class=&quot;border-t border-neutral-200 pt-4 text-sm&quot;>
+      <div class=&quot;flex justify-between mb-2&quot;>
+       <span class=&quot;text-neutral-500&quot;>
+        检测员:
+       </span>
+       <span class=&quot;text-neutral-700&quot;>
+        李华
+       </span>
+      </div>
+      <div class=&quot;flex justify-between mb-2&quot;>
+       <span class=&quot;text-neutral-500&quot;>
+        审核员:
+       </span>
+       <span class=&quot;text-neutral-700&quot;>
+        张明
+       </span>
+      </div>
+      <div class=&quot;flex justify-between&quot;>
+       <span class=&quot;text-neutral-500&quot;>
+        批准人:
+       </span>
+       <span class=&quot;text-neutral-700&quot;>
+        王强
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class=&quot;p-4 border-t border-neutral-200 bg-neutral-50 flex justify-center&quot;>
+     <button class=&quot;inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary/90 transition-colors&quot; id=&quot;download-report&quot;>
+      <i class=&quot;fas fa-download mr-2&quot;>
+      </i>
+      下载报告
+     </button>
+    </div>
+   </div>
+  </div>
+  <!-- [/MODULE] i8j_报告详情弹窗 -- 点击查看报告详情时显示，包含完整检测报告信息 -->
+  <!-- [MODULE] k9l_视频播放弹窗 -->
+  <div class=&quot;fixed inset-0 bg-black z-50 flex items-center justify-center hidden&quot; id=&quot;video-modal&quot;>
+   <div class=&quot;relative w-full max-w-full px-4&quot;>
+    <button class=&quot;absolute -top-12 right-4 text-white text-2xl hover:text-neutral-300&quot; id=&quot;close-video&quot;>
+     <i class=&quot;fas fa-times&quot;>
+     </i>
+    </button>
+    <div class=&quot;aspect-video bg-black rounded-lg overflow-hidden&quot; data-ytextravalue=&quot;extra-ko9t4o369&quot;>
+<video class=&quot;w-full h-full&quot; controls=&quot;&quot; data-ytindex=&quot;0&quot; data-ytoriginindex=&quot;0&quot; data-ytparentvalue=&quot;extra-ko9t4o369&quot; id=&quot;video-player&quot; poster=&quot;https://design.gemcoder.com/api/searchImage?query=五常大米 cooking tutorial video cover, rice in pot, steam rising, natural lighting, traditional Chinese kitchen setting&amp;width=640&amp;height=360&quot;>
+      <source src=&quot;#&quot; type=&quot;video/mp4&quot;/>
+      您的浏览器不支持视频播放
+     </video>
+    </div>
+   </div>
+  </div>
+  <!-- [/MODULE] k9l_视频播放弹窗 -- 点击视频封面时显示，用于播放教学视频 -->
+  <!-- [JSMOD] m0n_图片轮播功能 -->
+  <script id=&quot;carousel-script&quot;>
+   document.addEventListener('DOMContentLoaded', function () {
+  // 图片轮播功能
+  var carouselContainer = document.getElementById('carousel-container');
+  var slides = document.querySelectorAll('.carousel-slide');
+  var prevBtn = document.getElementById('prev-btn');
+  var nextBtn = document.getElementById('next-btn');
+  var indicators = document.querySelectorAll('#carousel-indicators button');
+  var currentIndex = 0;
+  var slideCount = slides.length;
+
+  // 更新轮播显示
+  function updateCarousel() {
+    carouselContainer.style.transform = &quot;translateX(-&quot;.concat(currentIndex * 100, &quot;%)&quot;);
+
+    // 更新指示器状态
+    indicators.forEach(function (indicator, index) {
+      if (index === currentIndex) {
+        indicator.classList.add('opacity-100');
+        indicator.classList.remove('opacity-50');
+      } else {
+        indicator.classList.add('opacity-50');
+        indicator.classList.remove('opacity-100');
+      }
+    });
+  }
+
+  // 下一张
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slideCount;
+    updateCarousel();
+  }
+
+  // 上一张
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    updateCarousel();
+  }
+
+  // 自动轮播
+  var autoplayInterval = setInterval(nextSlide, 5000);
+
+  // 按钮事件监听
+  nextBtn.addEventListener('click', function () {
+    clearInterval(autoplayInterval);
+    nextSlide();
+    autoplayInterval = setInterval(nextSlide, 5000);
+  });
+  prevBtn.addEventListener('click', function () {
+    clearInterval(autoplayInterval);
+    prevSlide();
+    autoplayInterval = setInterval(nextSlide, 5000);
+  });
+
+  // 指示器点击事件
+  indicators.forEach(function (indicator, index) {
+    indicator.addEventListener('click', function () {
+      clearInterval(autoplayInterval);
+      currentIndex = index;
+      updateCarousel();
+      autoplayInterval = setInterval(nextSlide, 5000);
+    });
+  });
+
+  // 触摸滑动支持
+  var touchStartX = 0;
+  var touchEndX = 0;
+  carouselContainer.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+    clearInterval(autoplayInterval);
+  }, {
+    passive: true
+  });
+  carouselContainer.addEventListener('touchend', function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+    autoplayInterval = setInterval(nextSlide, 5000);
+  }, {
+    passive: true
+  });
+  function handleSwipe() {
+    var swipeThreshold = 50;
+    if (touchEndX - touchStartX > swipeThreshold) {
+      prevSlide();
+    } else if (touchStartX - touchEndX > swipeThreshold) {
+      nextSlide();
+    }
+  }
+});
+  </script>
+  <!-- [/JSMOD] m0n_图片轮播功能 -- 实现菜品图片的轮播展示，支持自动轮播、手动切换和触摸滑动 -->
+  <!-- [JSMOD] o1p_检测报告交互 -->
+  <script id=&quot;report-script&quot;>
+   document.addEventListener('DOMContentLoaded', function () {
+  // 历史检测记录展开/收起
+  var showHistoryBtn = document.getElementById('show-history-btn');
+  var historyList = document.getElementById('history-list');
+  var historyIcon = document.getElementById('history-icon');
+  var historyOpen = false;
+  showHistoryBtn.addEventListener('click', function () {
+    historyOpen = !historyOpen;
+    if (historyOpen) {
+      historyList.classList.remove('hidden');
+      historyIcon.classList.add('rotate-180');
+    } else {
+      historyList.classList.add('hidden');
+      historyIcon.classList.remove('rotate-180');
+    }
+  });
+
+  // 检测报告弹窗
+  var viewReportBtn = document.getElementById('view-report-btn');
+  var reportModal = document.getElementById('report-modal');
+  var closeModal = document.getElementById('close-modal');
+  var modalContent = reportModal.querySelector('div');
+  function openModal() {
+    reportModal.classList.remove('hidden');
+    // 触发重排后添加过渡效果
+    setTimeout(function () {
+      reportModal.classList.add('opacity-100');
+      modalContent.classList.remove('scale-95');
+      modalContent.classList.add('scale-100');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModalFunc() {
+    reportModal.classList.remove('opacity-100');
+    modalContent.classList.remove('scale-100');
+    modalContent.classList.add('scale-95');
+    setTimeout(function () {
+      reportModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }, 300);
+  }
+  viewReportBtn.addEventListener('click', openModal);
+  closeModal.addEventListener('click', closeModalFunc);
+
+  // 点击模态框外部关闭
+  reportModal.addEventListener('click', function (e) {
+    if (e.target === reportModal) {
+      closeModalFunc();
+    }
+  });
+
+  // 下载报告按钮
+  var downloadReport = document.getElementById('download-report');
+  downloadReport.addEventListener('click', function () {
+    // 模拟下载功能
+    alert('报告下载功能已触发');
+  });
+});
+  </script>
+  <!-- [/JSMOD] o1p_检测报告交互 -- 实现历史检测记录的展开收起和检测报告详情弹窗的显示隐藏 -->
+  <!-- [JSMOD] q2r_视频播放功能 -->
+  <script id=&quot;video-script&quot;>
+   document.addEventListener('DOMContentLoaded', function () {
+  // 视频播放功能
+  var videoContainer = document.getElementById('video-container');
+  var videoModal = document.getElementById('video-modal');
+  var closeVideo = document.getElementById('close-video');
+  var videoPlayer = document.getElementById('video-player');
+  videoContainer.addEventListener('click', function () {
+    videoModal.classList.remove('hidden');
+    // 这里只是模拟视频播放，实际项目中需要设置真实视频源
+    // videoPlayer.src = &quot;真实视频URL&quot;;
+    // videoPlayer.play();
+    document.body.style.overflow = 'hidden';
+  });
+  function closeVideoModal() {
+    videoModal.classList.add('hidden');
+    // videoPlayer.pause();
+    // videoPlayer.src = &quot;&quot;;
+    document.body.style.overflow = '';
+  }
+  closeVideo.addEventListener('click', closeVideoModal);
+  videoModal.addEventListener('click', function (e) {
+    if (e.target === videoModal) {
+      closeVideoModal();
+    }
+  });
+});
+  </script>
+  <!-- [/JSMOD] q2r_视频播放功能 -- 实现教学视频的弹窗播放功能 -->
+  <!-- [JSMOD] s3t_页面其他交互 -->
+  <script id=&quot;other-interactions&quot;>
+   document.addEventListener('DOMContentLoaded', function () {
+  // 分享按钮
+  var shareBtn = document.getElementById('share-btn');
+  shareBtn.addEventListener('click', function () {
+    if (navigator.share) {
+      navigator.share({
+        title: '有机种植山东富士苹果 - 食品安全溯源',
+        text: '我查询了这个菜品的安全溯源信息，一起来看看吧！',
+        url: window.location.href
+      }).catch(function (error) {
+        return console.log('分享失败:', error);
+      });
+    } else {
+      alert('您的浏览器不支持分享功能，请手动复制链接分享');
+    }
+  });
+
+  // 刷新按钮
+  var refreshBtn = document.getElementById('refresh-btn');
+  refreshBtn.addEventListener('click', function () {
+    // 显示加载动画
+    refreshBtn.innerHTML = '<i class=&quot;fas fa-spinner fa-spin text-lg&quot;></i>';
+
+    // 模拟刷新数据
+    setTimeout(function () {
+      refreshBtn.innerHTML = '<i class=&quot;fas fa-sync-alt text-lg&quot;></i>';
+      alert('数据已更新至最新');
+    }, 1000);
+  });
+
+  // 平滑滚动
+  document.querySelectorAll('a[href^=&quot;#&quot;]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // 监听滚动，添加导航栏阴影
+  var header = document.querySelector('header');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 10) {
+      header.classList.add('shadow');
+    } else {
+      header.classList.remove('shadow');
+    }
+  });
+});
+  </script>
+  <!-- [/JSMOD] s3t_页面其他交互 -- 实现分享、刷新、平滑滚动和导航栏阴影等辅助交互功能 -->
+ </body>
+</html>
+" class="vueIframeApp" style="border:none;width: 100%;height: 100%;"></iframe>
+        </div>
+    </div>
+</body>
+</html>
